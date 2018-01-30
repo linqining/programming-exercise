@@ -5,9 +5,9 @@ def find_even_keys(hash)
   # ... (请回传一个数组)
 arr=hash.keys
 arr1=[]
-arr.each_with_index do |i,j|
+arr.each do |i|
   if hash[i]%2==0
-    arr1 << arr[j]
+    arr1 << i
   end
 end
 return arr1
