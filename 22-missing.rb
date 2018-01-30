@@ -2,6 +2,21 @@
 
 def find_missing(arr)
   # ...
+  arr=arr.uniq
+  arr1=[0,1,2,3,4,5,6,7,8,9]
+i=0
+while (i<arr.size)
+   j=0
+   while (j<arr1.size)
+    if arr[i]==arr1[j]
+      arr1.delete_at(j)
+      break
+    end
+     j+=1
+   end
+   i+=1
+end
+return arr1
 end
 
 answer = find_missing( [2,2,1,5,8,4] )
