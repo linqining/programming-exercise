@@ -13,8 +13,23 @@ while (true)
 end
 
 puts arr.to_s
+i=0
+sum=0
+max=arr[0]
+min=arr[0]
+while (i<arr.size)
+  sum+=arr[i]
+  if arr[i]>=max
+    max=arr[i]
+  end
+  if min>=arr[i]
+    min=arr[i]
+  end
+  i+=1
+end
+avg=sum.to_f/arr.size
 
-puts "总和是 _____"
-puts "平均是 _____"
-puts "最大值是 _____"
-puts "最小值是 _____"
+puts "总和是 #{sum}"
+puts "平均是 #{avg}"
+puts "最大值是#{max}"
+puts "最小值是#{min}"
