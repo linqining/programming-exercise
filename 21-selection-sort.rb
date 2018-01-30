@@ -3,6 +3,20 @@
 
 def selection_sort(arr)
   #...
+  n=arr.size
+  i=0
+  t=0
+  while(i<n-1)
+    j=0
+    while ((arr[i-j].to_i > arr[i+1-j].to_i)  && (i-j>=0) && (i+1-j<=n))
+      t=arr[i-j].to_i
+      arr[i-j]=arr[i+1-j].to_i
+      arr[i+1-j]=t
+      j+=1
+    end
+      i+=1
+  end
+  return arr
 end
 
 arr =  [7, 68, 42, 46, 9, 91, 77, 46, 86, 1]
