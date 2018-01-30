@@ -1,6 +1,15 @@
 # 给定一阵列内含数字，输出另一个数组只包含偶数
 
 def filter_even(arr)
+  arr1=[]
+  i=0
+  while (i<arr.size)
+    if arr[i]%2==0
+      arr1 << arr[i]
+    end
+    i+=1
+  end
+  return arr1
   #...
 end
 
