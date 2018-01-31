@@ -9,8 +9,30 @@ arr = [
 ]
 
 # ....
-
-puts "所有成年人，并由小到大: _________"
+arr.each_with_index do |i,j|
+if i["age"]<18
+  arr.delete_at(j)
+end
+end
+#
+def selection_sort(arr)
+  #...
+  n=arr.size
+  i=0
+  t=0
+  while(i<n-1)
+    j=0
+    while ((arr[i-j]["age"].to_i > arr[i+1-j]["age"].to_i)  && (i-j>=0) && (i+1-j<=n))
+      t=arr[i-j]
+      arr[i-j]=arr[i+1-j]
+      arr[i+1-j]=t
+      j+=1
+    end
+      i+=1
+  end
+  return arr
+end
+puts "所有成年人，并由小到大: "+selection_sort(arr).to_s
 
 # 答案应该是
 #[
